@@ -1,7 +1,15 @@
 
 public class Person {
 
-  String role;
+    Person(String phil, Role role) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    public enum Role {
+        TEACHER,
+        STUDENT
+    }
+
+  Role role;
   String name;
 
   public Person(String name, String role) {
@@ -11,6 +19,8 @@ public class Person {
 
   @Override
   public String toString() {
-    return this.name + " (" + this.role + ')';
+      String roleValue = this.role.name();
+      
+    return this.name + " (" + roleValue.toLowerCase() + ')';
   }
 }
